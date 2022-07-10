@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #D5916A;
+}
+.container{
+    background-color: #F2DBC9;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    background-color: #F2DBC9;
+    border-radius: 60px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.4),
+                -10px -10px 10px -1px rgba(255, 255, 255, 0.10);
+    display: flex;
+    align-items: center;  
+    position:absolute;  
+    -webkit-animation-name: rollerCoaster;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;        
+}
+nav:hover{
+    box-shadow: 0 0 3px #A1ADA7;
+    -webkit-box-shadow: 0 0 3px #A1ADA7;
+    -moz-box-shadow: 0 0 3px #A1ADA7;
+    border: 4px solid #A1ADA7, opacity 0.4; 
+}
+/*---Damian temidiredamian@gmail.com--*/
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 13px 35px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #D5916A;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: 0.5s;
+    margin: 10px;
+}
+nav ul li::after{
+    content: ''; 
+}
+nav ul li:hover{
+    color: #F2DBC9;
+    background-color: #D5916A;
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: inset 2px 2px 2px -1px rgba(242, 247, 250, 0.5),
+                inset -2px -2px 2px -1px rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+@-webkit-keyframes rollerCoaster {
+    from { -webkit-box-shadow: 0 0 1px #D5916A; }
+    50% { -webkit-box-shadow: 0 0 15px #A1ADA7; }
+    to { -webkit-box-shadow: 0 0 8px #C2914C; }
+} 
